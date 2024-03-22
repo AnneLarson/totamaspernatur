@@ -1,0 +1,43 @@
+{
+  "name": "totamaspernatur",
+  "version": "1.3.6",
+  "description": "A library to build Ethereum smart contract function calls.",
+  "main": "dist/src/index.js",
+  "types": "dist/types/src/index.d.ts",
+  "scripts": {
+    "test": "mocha --exit -r ts-node/register --timeout 100000 --recursive 'test/**/*.ts'",
+    "build": "npm run build-ts",
+    "build-ts": "tsc",
+    "lint": "TIMING=1 eslint --ignore-pattern dist/ --ext .ts --cache .",
+    "lint-fix": "TIMING=1 eslint --fix  --ignore-pattern dist/ --ext .ts --cache .",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnneLarson/totamaspernatur.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnneLarson/totamaspernatur.git/issues"
+  },
+  "homepage": "https://github.com/AnneLarson/totamaspernatur.git",
+  "dependencies": {
+    "ethereumjs-abi": "0.6.8",
+    "ethereumjs-util": "6.2.0",
+    "tronweb": "^2.7.2",
+    "bignumber.js": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/ethereumjs-abi": "0.6.3",
+    "@types/expect": "24.3.0",
+    "@types/mocha": "5.2.7",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "bitgo": "11.1.1",
+    "eslint": "^7.32.0",
+    "expect": "24.9.0",
+    "mocha": "6.2.2",
+    "ts-node": "8.5.4",
+    "typescript": "3.4.5"
+  },
+  "author": "BrandynWelch"
+}
